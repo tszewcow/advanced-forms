@@ -33,7 +33,14 @@
     </mat-form-field>
   </div>
   <div class="form-group row">
-    <button mat-raised-button color="primary" type="submit">Apply</button>
+    <app-customized-select-box [options]="genres" [placeholder]="'Genre'" formControlName="genre"></app-customized-select-box>
+  </div>
+
+  <!--<div class="form-group row">-->
+    <!--<app-rating-input [myFormControl]="bookForm.get('genre')"></app-rating-input>-->
+  <!--</div>-->
+  <div class="form-group row">
+    <button mat-raised-button color="primary" (click)="apply()" type="submit">Apply</button>
     <button
       mat-stroked-button
       color="warn"

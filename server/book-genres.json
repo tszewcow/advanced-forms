@@ -1,6 +1,6 @@
 [
-  {"id": 1, "genre": "IT"},
-  {"id": 2, "genre": "Science fiction"},
-  {"id": 3, "genre": "Fantasy"},
-  {"id": 4, "genre": "Crime"}
+  {"id": 1, "name": "IT", "icon": "favorite"},
+  {"id": 2, "name": "Science fiction", "icon": "star_rate"},
+  {"id": 3, "name": "Fantasy", "icon": "pets"},
+  {"id": 4, "name": "Crime", "icon": "fingerprint"}
 ]

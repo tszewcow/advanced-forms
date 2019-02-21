@@ -4,6 +4,7 @@ import {readFileSync} from 'fs';
 const { find, includes, max, map, isString } = require('lodash');
 
 const books = JSON.parse(readFileSync(__dirname + '/books.json', 'utf-8').toString());
+const genres = JSON.parse(readFileSync(__dirname + '/book-genres.json', 'utf-8').toString());
 
 function* idSequence(initial) {
   let i = initial;
@@ -15,7 +16,8 @@ const util = require('util');
 
 const isBook = (book) => !!book && !!book.title && isString(book.title)
   && !!book.author && isString(book.author)
-  && !!book.isbn && isString(book.isbn);
+  && !!book.isbn && isString(book.isbn)
+  && !!book.genre;
 const hasBook = (req, res, next) => {
     if (isBook(req.body)) {
         next();
@@ -65,7 +67,10 @@ app.get('/api/book/:id', (req, res) => {
   book ? res.json(book) : res.status(404).json({ error: 'book not found' });
 });
 
-
+app.get('/api/genres', (req, res) => {
+    res.json(genres);
+  }
+);
 
 
 
