@@ -41,18 +41,19 @@ export class CustomizedSelectBoxComponent implements OnInit, ControlValueAccesso
 
   writeValue(obj: any): void {
     this.matSelect.value = obj;
-    const genre = this.findGenreById(obj);
-    if (genre) {
-      this.selected = genre.name;
-    }
+    this.setSelectedIfGenreDefined();
   }
 
   onSelectionChange() {
+    this.setSelectedIfGenreDefined();
+    this.onChange(this.matSelect.value);
+  }
+
+  private setSelectedIfGenreDefined() {
     const genre = this.findGenreById(this.matSelect.value);
     if (genre) {
       this.selected = genre.name;
     }
-    this.onChange(this.matSelect.value);
   }
 
   private findGenreById(id: number): Genre {
