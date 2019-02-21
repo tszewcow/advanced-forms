@@ -24,7 +24,10 @@ export const routes: Routes = [
   },
   {
     path: 'book',
-    component: BookDetailsComponent
+    component: BookDetailsComponent,
+    resolve: {
+      bookGenres: BookGenresResolver,
+    }
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];

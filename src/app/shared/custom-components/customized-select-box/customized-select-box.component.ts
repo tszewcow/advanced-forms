@@ -1,6 +1,6 @@
 import {Component, forwardRef, Input, OnInit, ViewChild} from '@angular/core';
 import {Genre} from '../../../book/genre';
-import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {MatSelect} from '@angular/material';
 
 @Component({
