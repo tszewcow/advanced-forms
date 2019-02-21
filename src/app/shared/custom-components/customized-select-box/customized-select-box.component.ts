@@ -17,7 +17,6 @@ import {MatSelect} from '@angular/material';
 })
 export class CustomizedSelectBoxComponent implements OnInit, ControlValueAccessor {
   @ViewChild(MatSelect) matSelect: MatSelect;
-  @Input() formControl: FormControl;
   @Input() placeholder: string;
   @Input() options: Genre[] = [];
 
