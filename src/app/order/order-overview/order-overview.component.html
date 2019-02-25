@@ -1,0 +1,14 @@
+<form [formGroup]="form" (submit)="apply()" [class.ng-submit]="submitted">
+  <app-general-info></app-general-info>
+  <div class="form-group row">
+    <button mat-raised-button color="primary" type="submit">Apply</button>
+    <button
+      mat-stroked-button
+      color="warn"
+      type="button"
+
+    >
+      Cancel
+    </button>
+  </div>
+</form>

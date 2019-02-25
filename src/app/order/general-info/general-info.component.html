@@ -1,0 +1,21 @@
+<div formGroupName="generalInfo">
+  <div class="form-group row" >
+    <mat-form-field>
+      <input matInput placeholder="First name" formControlName="firstName">
+      <mat-error *ngIf="form.form.get('generalInfo').get('firstName').hasError('required')">
+        First name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group row" >
+    <mat-form-field>
+      <input matInput placeholder="Last name" formControlName="lastName">
+      <mat-error *ngIf="form.form.get('generalInfo').get('lastName').hasError('required')">
+        Last name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+</div>
+
+
+

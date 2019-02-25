@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './shared/routes/routes';
 import { BookModule } from './book/book.module';
 import { HttpClientModule } from '@angular/common/http';
+import {OrderModule} from './order/order.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule.forRoot(),
     RouterModule.forRoot(routes),
     // feature modules
-    BookModule
+    BookModule,
+    OrderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
