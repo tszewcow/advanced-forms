@@ -1,8 +1,8 @@
-import { BookService } from './../book.service';
+import {BookService} from './../book.service';
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Book } from '../book';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Book} from '../book';
 import {Genre} from '../genre';
 
 @Component({

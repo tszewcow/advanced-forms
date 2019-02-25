@@ -1,7 +1,7 @@
 import {Component, forwardRef, Input, OnInit, ViewChild} from '@angular/core';
-import {Genre} from '../../../book/genre';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {MatSelect} from '@angular/material';
+import {Genre} from '@book/genre';
 
 @Component({
   selector: 'app-customized-select-box',
@@ -21,9 +21,10 @@ export class CustomizedSelectBoxComponent implements OnInit, ControlValueAccesso
   @Input() options: Genre[] = [];
 
   selected: any;
-  onChange = (val: any) => {};
 
   constructor() {}
+
+  onChange = (val: any) => {};
 
   ngOnInit(): void {
   }
