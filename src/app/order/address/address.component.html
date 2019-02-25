@@ -1,0 +1,34 @@
+<form [formGroup]="form">
+  <div class="form-group row" >
+    <mat-form-field>
+      <input matInput placeholder="Street" formControlName="street">
+      <mat-error *ngIf="form.get('street').hasError('required')">
+        Street is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group row" >
+    <mat-form-field>
+      <input matInput placeholder="Zip code" formControlName="zipCode">
+      <mat-error *ngIf="form.get('zipCode').hasError('required')">
+        Zip code is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group row" >
+    <mat-form-field>
+      <input matInput placeholder="City" formControlName="city">
+      <mat-error *ngIf="form.get('city').hasError('required')">
+        City is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group row" >
+    <mat-form-field>
+      <input matInput placeholder="Country" formControlName="country">
+      <mat-error *ngIf="form.get('country').hasError('required')">
+        Country is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+</form>

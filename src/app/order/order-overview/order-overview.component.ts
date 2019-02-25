@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-order-overview',
@@ -13,7 +13,9 @@ export class OrderOverviewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.form = new FormGroup({});
+    this.form = new FormGroup({
+      address: new FormControl(),
+    });
   }
 
   apply(): void {
