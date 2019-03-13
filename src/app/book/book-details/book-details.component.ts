@@ -1,6 +1,6 @@
 import {BookService} from './../book.service';
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, FormGroupDirective, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Book} from '../book';
 import {Genre} from '../genre';
@@ -15,6 +15,7 @@ export class BookDetailsComponent implements OnInit {
   submitted: boolean;
   bookForm: FormGroup;
   genres: Genre[];
+  @ViewChild(FormGroupDirective) myForm;
 
   constructor(
     private formBuilder: FormBuilder,

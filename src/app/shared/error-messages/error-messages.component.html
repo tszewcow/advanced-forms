@@ -1,0 +1,6 @@
+<!--<ul *ngIf="errorsShouldBeShown()">-->
+  <!--<li *ngFor="let error of errorMessages">{{error}}</li>-->
+<!--</ul>-->
+<div *ngIf="errorsShouldBeShown()" class="mat-error">
+  <span *ngFor="let error of errorMessages">{{error}}</span>
+</div>

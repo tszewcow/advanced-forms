@@ -1,7 +1,7 @@
 <form [formGroup]="bookForm" (submit)="apply()" [class.ng-submit]="submitted">
   <div class="form-group row">
     <mat-form-field class="example-container">
-      <input matInput placeholder="ISBN" formControlName="isbn" />
+      <input matInput placeholder="ISBN" formControlName="isbn"/>
       <mat-error *ngIf="bookForm.get('isbn').hasError('required')">
         ISBN is <strong>required</strong>
       </mat-error>
@@ -12,7 +12,7 @@
   </div>
   <div class="form-group row">
     <mat-form-field class="example-container">
-      <input matInput placeholder="Author" formControlName="author" />
+      <input matInput placeholder="Author" formControlName="author"/>
       <mat-error *ngIf="bookForm.get('author').hasError('required')">
         Author is <strong>required</strong>
       </mat-error>
@@ -23,7 +23,7 @@
   </div>
   <div class="form-group row">
     <mat-form-field class="example-container">
-      <input matInput placeholder="Title" formControlName="title" />
+      <input matInput placeholder="Title" formControlName="title"/>
       <mat-error *ngIf="bookForm.get('title').hasError('required')">
         Title is <strong>required</strong>
       </mat-error>
@@ -33,7 +33,11 @@
     </mat-form-field>
   </div>
   <div class="form-group row">
-    <app-customized-select-box [options]="genres" [placeholder]="'Genre'" formControlName="genre"></app-customized-select-box>
+    <app-customized-select-box [options]="genres" [placeholder]="'Genre'"
+                               formControlName="genre"></app-customized-select-box>
+    <mat-error>
+      <app-error-messages [ofFormControl]="bookForm.get('genre')" [ofForm]="myForm"></app-error-messages>
+    </mat-error>
   </div>
 
   <div class="form-group row">

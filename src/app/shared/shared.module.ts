@@ -2,7 +2,7 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
   MatButtonModule,
-  MatCardModule,
+  MatCardModule, MatFormFieldModule,
   MatIconModule, MatInputModule,
   MatListModule, MatSelectModule,
   MatSidenavModule,
@@ -16,6 +16,8 @@ import {BookService} from '../book/book.service';
 import {CustomizedSelectBoxComponent} from './custom-components/customized-select-box/customized-select-box.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BookGenresService} from '../book/book-genres.service';
+import { AddErrorMessagesComponent } from './add-error-messages/add-error-messages.component';
+import { ErrorMessagesComponent } from './error-messages/error-messages.component';
 
 @NgModule({
   imports: [
@@ -29,8 +31,11 @@ import {BookGenresService} from '../book/book-genres.service';
     MatSelectModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
   ],
-  declarations: [ToolbarComponent, NavigationComponent, HomeComponent, CustomizedSelectBoxComponent],
+  declarations: [ToolbarComponent, NavigationComponent, HomeComponent, CustomizedSelectBoxComponent,
+    AddErrorMessagesComponent, ErrorMessagesComponent,
+    ],
   exports: [
     CommonModule,
     ToolbarComponent,
@@ -42,6 +47,9 @@ import {BookGenresService} from '../book/book-genres.service';
     MatCardModule,
     CustomizedSelectBoxComponent,
     MatInputModule,
+    AddErrorMessagesComponent,
+    ErrorMessagesComponent,
+    MatFormFieldModule
   ]
 })
 export class SharedModule {
