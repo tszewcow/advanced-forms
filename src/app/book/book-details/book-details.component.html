@@ -1,7 +1,11 @@
+<!--TODO: according to spec it should be ngSubmit event, right?. And what to u need ng-submit class here?-->
 <form [formGroup]="bookForm" (submit)="apply()" [class.ng-submit]="submitted">
   <div class="form-group row">
     <mat-form-field class="example-container">
       <input matInput placeholder="ISBN" formControlName="isbn" />
+      <!--TODO: Something does not work here. According to spec i should get error message as soon as the control is
+      invalid and touched or control is invalid and for is submitted. I get error only on form-submit
+      -->
       <mat-error *ngIf="bookForm.get('isbn').hasError('required')">
         ISBN is <strong>required</strong>
       </mat-error>
@@ -33,6 +37,7 @@
     </mat-form-field>
   </div>
   <div class="form-group row">
+    <!--TODO: why don't you show error message on validation fail?-->
     <app-customized-select-box [options]="genres" [placeholder]="'Genre'" formControlName="genre"></app-customized-select-box>
   </div>
 
